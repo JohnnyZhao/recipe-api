@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	"github.com/johnnyzhao/retail-ai-api/internal/domain"
+	"github.com/johnnyzhao/recipe-api/internal/domain"
 	"gorm.io/gorm"
 )
 
@@ -74,10 +74,10 @@ func (a *Api) GetByID(c *gin.Context) {
 		a.handleInternalError(c)
 		return
 	}
-
-	c.JSON(http.StatusOK, ItemResponse{
-		Message: "Recipe details by id",
-		Recipe:  recipe,
+	message := "Recipe details by id"
+	c.JSON(http.StatusOK, ListResponse{
+		Message: &message,
+		Recipes: []domain.Recipe{recipe},
 	})
 }
 

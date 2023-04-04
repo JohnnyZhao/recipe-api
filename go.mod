@@ -1,4 +1,4 @@
-module github.com/johnnyzhao/retail-ai-api
+module github.com/johnnyzhao/recipe-api
 
 go 1.18
 

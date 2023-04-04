@@ -4,8 +4,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/johnnyzhao/retail-ai-api/internal/app"
-	"github.com/johnnyzhao/retail-ai-api/internal/pkg/repo"
+	"github.com/johnnyzhao/recipe-api/internal/app"
+	"github.com/johnnyzhao/recipe-api/internal/pkg/repo"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	logger2 "gorm.io/gorm/logger"
