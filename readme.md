@@ -48,7 +48,7 @@ Response:
 ```
 Error Response:
 
-If an error occurs while processing a request, the Recipe API Service returns an HTTP error response with an error message in the response body.
+If an error occurs while create a recipe, the API returns an HTTP error response with an error message in the response body.
 
 The error response has the following format:
 ```json
@@ -95,6 +95,7 @@ Response:
 ### GET /recipes/:id
 Get a specific recipe record by ID.
 
+Response:
 ```json
 {
   "message": "Recipe details by id",
@@ -115,7 +116,9 @@ Get a specific recipe record by ID.
 
 ### PATCH /recipes/:id
 
-Request:
+Update a specific recipe record by ID.
+
+Request(provide at least one field below):
 ```json
 {
   "title": "Spaghetti Bolognese",
@@ -154,10 +157,33 @@ Response:
 }
 ```
 
-Error Response:
+
+### General Error Response
+
+If an error occurs while processing a request, the Recipe API Service returns an HTTP error response with an error message in the response body.
+
+The error response has the following formats, you could find the error message useful:
+
+1. Internal Server Error:
+
 ```json
 {
-    "message": "Recipe successfully removed!"
+"message": "Internal Server Error"
 }
 ```
 
+2. Bad Status Error:
+
+```json
+{
+"message": "invalid payload"
+}
+```
+
+3. Recipe Not Found Error:
+
+```json
+{
+  "message": "No recipe found"
+}
+```
