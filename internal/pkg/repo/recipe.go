@@ -3,7 +3,7 @@ package repo
 import (
 	"context"
 
-	"github.com/johnnyzhao/retail-ai-api/internal/domain"
+	"github.com/johnnyzhao/recipe-api/internal/domain"
 	"gorm.io/gorm"
 )
 

@@ -3,10 +3,11 @@ package app
 import (
 	"time"
 
-	"github.com/johnnyzhao/retail-ai-api/internal/domain"
+	"github.com/johnnyzhao/recipe-api/internal/domain"
 )
 
 type ListResponse struct {
+	Message *string         `json:"message,omitempty"`
 	Recipes []domain.Recipe `json:"recipes"`
 }
 
